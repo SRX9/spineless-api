@@ -45,7 +45,7 @@ export default function PricingPage() {
         <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
           <h1 className="font-ghibli-bold text-4xl md:text-5xl mb-4 text-center">Simple, Transparent Pricing</h1>
           <p className="text-xl md:text-2xl max-w-3xl text-center">
-            Choose the plan that's right for you. All plans include access to our core features.
+            Choose the plan that&#39;s right for you. All plans include access to our core features.
           </p>
         </div>
       </div>

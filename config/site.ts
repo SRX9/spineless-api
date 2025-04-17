@@ -1,5 +1,6 @@
 export type SiteConfig = typeof siteConfig;
-export const AppHost = process.env.NEXT_PUBLIC_HOST || "https://spinelessapi.vercel.app";
+export const AppHost =
+  process.env.NEXT_PUBLIC_HOST || "https://spineless-api.vercel.app";
 
 export const siteConfig = {
   name: "Spineless API",

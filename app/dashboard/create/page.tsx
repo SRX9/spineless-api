@@ -369,12 +369,12 @@ export default function CreateApiPage() {
                   />
                   <p className="mt-4 mb-2 text-sm">Available types:</p>
                   <ul className="text-sm list-disc pl-5 space-y-1">
-                    <li>"string" - Text values</li>
-                    <li>"number" - Numeric values</li>
-                    <li>"boolean" - true/false values</li>
-                    <li>"array" - Lists of items</li>
-                    <li>"object" - Nested structures</li>
-                    <li>"date" - Date strings</li>
+                    <li>&quot;string&quot; - Text values</li>
+                    <li>&quot;number&quot; - Numeric values</li>
+                    <li>&quot;boolean&quot; - true/false values</li>
+                    <li>&quot;array&quot; - Lists of items</li>
+                    <li>&quot;object&quot; - Nested structures</li>
+                    <li>&quot;date&quot; - Date strings</li>
                   </ul>
                 </div>
               </TabsContent>
@@ -388,7 +388,7 @@ export default function CreateApiPage() {
                 <CodeBlock code={testResponse} />
               ) : (
                 <div className="flex items-center justify-center h-20 text-muted-foreground">
-                  Click "Generate Test Response" to see a sample
+                  Click &quot;Generate Test Response&quot; to see a sample
                 </div>
               )}
             </div>

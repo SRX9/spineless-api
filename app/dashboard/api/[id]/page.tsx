@@ -189,7 +189,7 @@ export default function ApiDetailPage({ params }: { params: { id: string } }) {
     return (
       <div className="text-center py-12">
         <h2 className="text-xl font-semibold ">API not found</h2>
-        <p className="text-muted-foreground mt-2">The API you're looking for doesn't exist or you don't have access to it.</p>
+        <p className="text-muted-foreground mt-2">The API you&apos;re looking for doesn&apos;t exist or you don&apos;t have access to it.</p>
         <Button className="mt-4 " asChild>
           <Link href="/dashboard/apis">Go back to API List</Link>
         </Button>
@@ -360,7 +360,7 @@ export default function ApiDetailPage({ params }: { params: { id: string } }) {
                 ) : (
                   <div className="flex items-center justify-center h-32 border border-dashed rounded-md bg-[#5C9EAD]/5 border-[#5C9EAD]/20">
                     <p className="text-muted-foreground">
-                      Click "Generate Sample Response" to see a sample
+                      Click &quot;Generate Sample Response&quot; to see a sample
                     </p>
                   </div>
                 )}
@@ -405,7 +405,7 @@ export default function ApiDetailPage({ params }: { params: { id: string } }) {
                 ) : (
                   <div className="flex items-center justify-center h-32 border border-dashed rounded-md bg-[#5C9EAD]/5 border-[#5C9EAD]/20">
                     <p className="text-muted-foreground">
-                      Click "Test Live API Endpoint" to see the actual response
+                      Click &quot;Test Live API Endpoint&quot; to see the actual response
                     </p>
                   </div>
                 )}

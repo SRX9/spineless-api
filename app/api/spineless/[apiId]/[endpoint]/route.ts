@@ -15,38 +15,43 @@ export interface ApiRequestLog {
 }
 
 export async function GET(
-  request: NextRequest, 
-  { params }: { params: { endpoint: string; apiId: string } }
+  request: NextRequest,
+  { params }: { params: Promise<{ endpoint: string; apiId: string }> }
 ) {
-  return handleRequest(request, params, 'GET');
+  const { endpoint, apiId } = await params;
+  return handleRequest(request, { endpoint, apiId }, 'GET');
 }
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { endpoint: string; apiId: string } }
+  { params }: { params: Promise<{ endpoint: string; apiId: string }> }
 ) {
-  return handleRequest(request, params, 'POST');
+  const { endpoint, apiId } = await params;
+  return handleRequest(request, { endpoint, apiId }, 'POST');
 }
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { endpoint: string; apiId: string } }
+  { params }: { params: Promise<{ endpoint: string; apiId: string }> }
 ) {
-  return handleRequest(request, params, 'PUT');
+  const { endpoint, apiId } = await params;
+  return handleRequest(request, { endpoint, apiId }, 'PUT');
 }
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { endpoint: string; apiId: string } }
+  { params }: { params: Promise<{ endpoint: string; apiId: string }> }
 ) {
-  return handleRequest(request, params, 'DELETE');
+  const { endpoint, apiId } = await params;
+  return handleRequest(request, { endpoint, apiId }, 'DELETE');
 }
 
 export async function PATCH(
   request: NextRequest,
-  { params }: { params: { endpoint: string; apiId: string } }
+  { params }: { params: Promise<{ endpoint: string; apiId: string }> }
 ) {
-  return handleRequest(request, params, 'PATCH');
+  const { endpoint, apiId } = await params;
+  return handleRequest(request, { endpoint, apiId }, 'PATCH');
 }
 
 async function handleRequest(
@@ -62,7 +67,7 @@ async function handleRequest(
   const supabase = createServerClient(await cookies());
 
   try {
-    const { endpoint, apiId } = await params;
+    const { endpoint, apiId } = params;
 
     logData.api_endpoint_id = apiId;
     const forwardedFor = request.headers.get('x-forwarded-for');

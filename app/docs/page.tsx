@@ -80,7 +80,7 @@ export default function DocsPage() {
                     <div>
                       <h3 className="font-ghibli-bold text-xl text-[#2d4a3e] mb-2">Create an Account</h3>
                       <p className="text-[#5a8a9f]">
-                        Sign up for a free Spineless API account to get access to the platform. You'll need to provide your email and create a password.
+                        Sign up for a free Spineless API account to get access to the platform. You&apos;ll need to provide your email and create a password.
                       </p>
                     </div>
                   </div>
@@ -91,7 +91,7 @@ export default function DocsPage() {
                     <div>
                       <h3 className="font-ghibli-bold text-xl text-[#2d4a3e] mb-2">Create Your First API</h3>
                       <p className="text-[#5a8a9f]">
-                        After logging in, navigate to the dashboard and click "Create New API". You'll need to provide a name, description, and schema for your API.
+                        After logging in, navigate to the dashboard and click &quot;Create New API&quot;. You&apos;ll need to provide a name, description, and schema for your API.
                       </p>
                     </div>
                   </div>
@@ -113,7 +113,7 @@ export default function DocsPage() {
                     <div>
                       <h3 className="font-ghibli-bold text-xl text-[#2d4a3e] mb-2">Generate and Test</h3>
                       <p className="text-[#5a8a9f]">
-                        Once your schema is defined, click "Generate" to create your mock API. You'll get a unique endpoint URL that you can use in your frontend application.
+                        Once your schema is defined, click &quot;Generate&quot; to create your mock API. You&apos;ll get a unique endpoint URL that you can use in your frontend application.
                       </p>
                     </div>
                   </div>
@@ -190,7 +190,7 @@ export default function DocsPage() {
               <Card className="bg-white border-2 border-[#d2e0e9] p-8">
                 <h2 className="font-ghibli-bold text-3xl text-[#2d4a3e] mb-6">Integrating with Your Application</h2>
                 <p className="text-[#5a8a9f] mb-8 text-lg">
-                  Once you've created your mock API, it's time to integrate it with your frontend application.
+                  Once you&apos;ve created your mock API, it&apos;s time to integrate it with your frontend application.
                 </p>
 
                 <Tabs defaultValue="fetch" className="w-full">
@@ -204,7 +204,7 @@ export default function DocsPage() {
                     <div>
                       <h3 className="font-ghibli-bold text-xl text-[#2d4a3e] mb-4">Using Fetch API</h3>
                       <p className="text-[#5a8a9f] mb-4">
-                        Here's how to use the Fetch API to call your mock API:
+                        Here&apos;s how to use the Fetch API to call your mock API:
                       </p>
                       <Card className="bg-[#f8fbfd] border-2 border-[#d2e0e9] p-6">
                         <pre className="text-xs md:text-sm text-[#5a8a9f] bg-[#f8fbfd] rounded-lg p-4 overflow-x-auto whitespace-pre-wrap">
@@ -226,7 +226,7 @@ export default function DocsPage() {
                     <div>
                       <h3 className="font-ghibli-bold text-xl text-[#2d4a3e] mb-4">Using Axios</h3>
                       <p className="text-[#5a8a9f] mb-4">
-                        If you prefer Axios, here's how to use it:
+                        If you prefer Axios, here&apos;s how to use it:
                       </p>
                       <Card className="bg-[#f8fbfd] border-2 border-[#d2e0e9] p-6">
                         <pre className="text-xs md:text-sm text-[#5a8a9f] bg-[#f8fbfd] rounded-lg p-4 overflow-x-auto whitespace-pre-wrap">

@@ -93,7 +93,7 @@ export default function FeaturesPage() {
             </div>
             <h3 className="font-ghibli-bold text-2xl text-[#2d4a3e] mb-2">Instant Creation</h3>
             <p className="text-[#5a8a9f] mb-4">
-              Create and deploy mock APIs in seconds, not hours or days.
+              Choose the plan that&#39;s right for you. All plans include access to our core features.
             </p>
           </Card>
 
@@ -191,11 +191,11 @@ export default function FeaturesPage() {
                 <pre className="text-xs md:text-sm text-[#5a8a9f] bg-[#f8fbfd] rounded-lg p-4 overflow-x-auto whitespace-pre-wrap">
 {`{
   "product": {
-    "id": "number:id",
-    "name": "string:product",
-    "price": "number:price",
-    "inStock": "boolean",
-    "tags": "array:string:3"
+    &#34;id&#34;: &#34;number:id&#34;,
+    &#34;name&#34;: &#34;string:product&#34;,
+    &#34;price&#34;: &#34;number:price&#34;,
+    &#34;inStock&#34;: &#34;boolean&#34;,
+    &#34;tags&#34;: &#34;array:string:3&#34;
   }
 }`}
                 </pre>
@@ -210,7 +210,7 @@ export default function FeaturesPage() {
               <h3 className="font-ghibli-bold text-2xl text-[#2d4a3e]">Generate Your API</h3>
             </div>
             <p className="text-[#5a8a9f] mb-6 pl-14">
-              Our AI analyzes your schema and generates realistic mock data. You'll get a unique endpoint and a preview of the response.
+              Our AI analyzes your schema and generates realistic mock data. You&#39;ll get a unique endpoint and a preview of the response.
             </p>
             <div className="pl-14 max-w-3xl">
               <Card className="bg-[#f8fbfd] border-2 border-[#d2e0e9] p-6">
