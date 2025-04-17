@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import { Loader2, Copy, Play, Code, ExternalLink } from "lucide-react";
 
 import { useAuth } from "@/hooks/use-auth";
@@ -17,12 +17,12 @@ import CodeBlock from "@/components/ui/CodeBlock";
 import Link from "next/link";
 import React from "react";
 
-export default function ApiDetailPage({ params }: { params: { id: string } }) {
+export default function ApiDetailPage() {
   const [apiData, setApiData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [apiEndpoint, setApiEndpoint] = useState("");
   const [activeTab, setActiveTab] = useState("overview");
-  const { id }: { id: string } = React.use(params as any);
+  const { id } = useParams();
   
   // Test response states
   const [testResponse, setTestResponse] = useState("");

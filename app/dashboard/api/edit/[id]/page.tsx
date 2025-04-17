@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import { Loader2, Save, ArrowLeft } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
 import { useToast } from "@/hooks/use-toast";
@@ -30,7 +30,7 @@ import CodeBlock from "@/components/ui/CodeBlock";
 import { generateAIResponse } from "@/services/ai-service";
 import React from "react";
 
-export default function ApiEditPage({ params }: { params: { id: string } }) {
+export default function ApiEditPage() {
   const [apiData, setApiData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
@@ -47,7 +47,7 @@ export default function ApiEditPage({ params }: { params: { id: string } }) {
 
   const { toast } = useToast();
   const router = useRouter();
-  const { id }: { id: string } = React.use(params as any);
+  const { id } = useParams();
   const { user, loading } = useAuth();
   const supabase = createSupabaseBrowserClient();
 

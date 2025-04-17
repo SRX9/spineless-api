@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { AppHost } from "@/config/site";
 
 
 
@@ -245,7 +246,7 @@ const userSchema = {
 };
 
 // 2. Use the Spineless API endpoint in your code
-fetch("https://${window.location.hostname}/api/spineless/asdawd-3ead-2q3e-ad2342/users")
+fetch("${AppHost}/api/spineless/asdawd-3ead-2q3e-ad2342/users")
   .then(response =&gt; response.json())
   .then(data =&gt; {
     // 3. Work with realistic mock data while backend is in development
