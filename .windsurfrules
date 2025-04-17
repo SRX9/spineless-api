@@ -1,0 +1,6 @@
+- Spineless API is a powerful mock API generation service designed to accelerate frontend development by providing realistic, consistent test data without waiting for backend teams. 
+- Next.js App router App with Supabase Authentication and Database.
+- Every page has layout.tsx for site metadata purpose
+- use all the elements & components for building UI from components/ui folder only.
+- The entire site theme, coloring, and all is inspired from Ghibli Studio.
+
