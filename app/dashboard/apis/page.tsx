@@ -136,13 +136,16 @@ export default function APIsPage() {
 
   return (
     <div className="max-w-7xl mx-auto space-y-8 py-6">
-
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight text-white">Your APIs</h1>
-          <p className=" text-white pt-2 ">Manage your Spineless API collection</p>
+          <h1 className="text-3xl font-bold tracking-tight text-white">
+            Your APIs
+          </h1>
+          <p className=" text-white pt-2 ">
+            Manage your Spineless API collection
+          </p>
         </div>
-        <Button  asChild>
+        <Button asChild>
           <Link href="/dashboard/create">
             <PlusCircle className="h-4 w-4 mr-2" />
             Create New API
@@ -150,14 +153,20 @@ export default function APIsPage() {
         </Button>
       </div>
 
-
       {/* API Cards Listing */}
       {apis.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-16 opacity-90">
-          <img src="/ghibli/soot-sprite.png" alt="No APIs" className="w-24 h-24 mb-4 animate-bounce" />
-          <div className="text-lg font-semibold text-primary mb-2">No APIs found</div>
-          <div className="text-muted-foreground mb-4">You haven’t created any mock APIs yet.</div>
-          <Button asChild variant="default" className="rounded-full px-6 py-2 bg-primary/80 hover:bg-primary">
+          <div className="text-lg font-semibold text-white mb-2">
+            No APIs found
+          </div>
+          <div className="text-white mb-4">
+            You haven’t created any mock APIs yet.
+          </div>
+          <Button
+            asChild
+            variant="default"
+            className="rounded-full px-6 py-2 bg-primary/80 hover:bg-primary"
+          >
             <Link href="/dashboard/create">
               <PlusCircle className="h-5 w-5 mr-2" /> Create your first API
             </Link>
@@ -165,13 +174,19 @@ export default function APIsPage() {
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {apis.map(api => (
+          {apis.map((api) => (
             <ApiCard
               key={api.id}
               id={api.id}
               name={api.name || api.endpoint_path}
               description={api.description || "No description provided"}
-              endpoint={`${typeof window !== "undefined" ? window.location.origin : ""}/api/spineless/${api.id}/${api.endpoint_path.startsWith("/") ? api.endpoint_path.substring(1) : api.endpoint_path}`}
+              endpoint={`${
+                typeof window !== "undefined" ? window.location.origin : ""
+              }/api/spineless/${api.id}/${
+                api.endpoint_path.startsWith("/")
+                  ? api.endpoint_path.substring(1)
+                  : api.endpoint_path
+              }`}
               createdAt={api.created_at}
               onDelete={() => {
                 setDeleteApiId(api.id);
@@ -189,17 +204,18 @@ export default function APIsPage() {
           <DialogHeader>
             <DialogTitle className="text-[#2D5362]">Delete API</DialogTitle>
             <DialogDescription>
-              Are you sure you want to delete this API? This action cannot be undone.
+              Are you sure you want to delete this API? This action cannot be
+              undone.
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               onClick={() => setDeleteDialogOpen(false)}
             >
               Cancel
             </Button>
-            <Button 
+            <Button
               variant="destructive"
               onClick={deleteApi}
               disabled={isDeleting}
