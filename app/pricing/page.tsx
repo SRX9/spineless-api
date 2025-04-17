@@ -86,7 +86,7 @@ export default function PricingPage() {
             </ul>
             
             <Button className="w-full rounded-full py-6  font-semibold text-lg shadow-md">
-              Get Started
+              <Link href="/dashboard/create">Get Started</Link>
             </Button>
           </Card>
           {/* Developer Plan */}

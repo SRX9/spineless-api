@@ -49,9 +49,11 @@ export default function LandingPage() {
                 Get started free
               </Button>
             </Link>
-            <Button variant="outline" className="rounded-full px-8 py-3 text-lg font-semibold ">
-              See how it works
-            </Button>
+            <Link href="/docs">
+              <Button variant="outline" className="rounded-full px-8 py-3 text-lg font-semibold ">
+                See how it works
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

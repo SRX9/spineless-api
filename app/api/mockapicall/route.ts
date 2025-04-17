@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
-import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
+import { createServerClient, createSupabaseServerClient_old } from '@/lib/supabase';
 
 type OpenRouterResponse = {
   choices: Array<{
@@ -25,7 +25,7 @@ type GenerateResponse = {
 
 export async function POST(request: Request) {
   // Authenticate user and get Supabase client
-  const supabaseAuth = createRouteHandlerClient({ cookies });
+  const supabaseAuth = createServerClient(await cookies());
   const { data: { user }, error: authError } = await supabaseAuth.auth.getUser();
   if (authError || !user) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });

@@ -18,7 +18,7 @@ interface FooterProps {
 export default function Footer({ transparent = false }: FooterProps) {
   return (
     <footer
-      className={`w-full relative z-40 mt-auto px-0 pt-0 pb-0 flex flex-col items-center bg-none ${transparent ? 'bg-transparent' : 'bg-[#2d4a3e]'} `}
+      className={`w-full relative z-40 mt-auto px-0 pt-0 pb-0 flex flex-col items-center bg-none `}
       style={{ minHeight: '180px' }}
     >
       {/* Background overlay for Ghibli blur and color */}
