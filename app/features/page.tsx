@@ -11,7 +11,7 @@ import { Separator } from "@/components/ui/separator";
 
 export default function FeaturesPage() {
   return (
-    <main className="min-h-screen flex flex-col bg-[#f5ebd7] overflow-x-hidden">
+    <main className="min-h-screen flex flex-col bg-[#f5ebd7] overflow-hidden">
       <Navbar />
       {/* HEADER */}
       <div className="w-full relative h-80 px-6 flex flex-col items-center justify-center text-white overflow-hidden">

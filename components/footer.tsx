@@ -27,7 +27,7 @@ export default function Footer({ transparent = false }: FooterProps) {
           src="/landingbgimage.png"
           alt="Ghibli Footer Background"
           fill
-          className="object-cover object-bottom opacity-70 blur-[2px] scale-110"
+          className="object-cover object-bottom "
           priority={false}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#2d4a3e]/90 via-[#3e5a4a]/70 to-transparent" />
@@ -44,9 +44,9 @@ export default function Footer({ transparent = false }: FooterProps) {
           <Image
             src="/spinelessapilogo.png"
             alt="Spineless API Logo"
-            width={38}
-            height={38}
-            className="mr-2 animate-float"
+            width={50}
+            height={50}
+            className="mr-2 "
           />
           <span className="font-ghibli font-bold text-[#f5ebd7] tracking-wide">Spineless API</span>
         </div>
@@ -55,7 +55,7 @@ export default function Footer({ transparent = false }: FooterProps) {
             <Link
               key={link.href}
               href={link.href}
-              className="relative px-2 py-1 group transition-colors duration-300 hover:text-[#b7c77d] font-ghibli text-lg"
+              className="relative px-2 py-1 group transition-colors duration-300 text-white font-ghibli text-lg"
             >
               <span className="relative z-10">{link.label}</span>
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#b7c77d] transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>

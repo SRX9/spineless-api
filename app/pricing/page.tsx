@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import BirdsAnimation from "@/components/ui/birds-animation";
 
 const CheckIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#6a9ab0]">
@@ -31,8 +32,9 @@ export default function PricingPage() {
   };
 
   return (
-    <main className="min-h-screen flex flex-col bg-[#f5ebd7] overflow-x-hidden">
-      <Navbar />
+    <main className="min-h-screen flex flex-col bg-[#f5ebd7] overflow-hidden">
+      <Navbar />     
+      
       {/* HEADER */}
       <div className="w-full relative h-80 px-6 flex flex-col items-center justify-center text-white overflow-hidden">
         <Image

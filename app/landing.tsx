@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/footer";
@@ -11,6 +11,7 @@ import { Separator } from "@/components/ui/separator";
 import { AppHost } from "@/config/site";
 
 
+import BirdsAnimation from "@/components/ui/birds-animation";
 
 export default function LandingPage() {
 
@@ -20,6 +21,34 @@ export default function LandingPage() {
 
       {/* HERO SECTION */}
       <section id="hero" className="relative w-full flex flex-col items-center justify-center text-center overflow-hidden min-h-screen">
+        {/* Birds Animation with moving birds */}
+        {(() => {
+          // Create 8 invisible refs as sitting points for birds
+          const sitRef1 = useRef<HTMLDivElement>(null);
+          const sitRef2 = useRef<HTMLDivElement>(null);
+          const sitRef3 = useRef<HTMLDivElement>(null);
+          const sitRef4 = useRef<HTMLDivElement>(null);
+          const sitRef5 = useRef<HTMLDivElement>(null);
+          const sitRef6 = useRef<HTMLDivElement>(null);
+          const sitRef7 = useRef<HTMLDivElement>(null);
+          const sitRef8 = useRef<HTMLDivElement>(null);
+          // Render the birds animation and the invisible refs
+          return (
+            <>
+              <BirdsAnimation sitRefs={[sitRef1, sitRef2, sitRef3, sitRef4, sitRef5, sitRef6, sitRef7, sitRef8] as unknown as React.RefObject<HTMLElement>[]} numBirds={6} />
+              {/* Invisible sitting points for birds, distributed across the page */}
+              <div ref={sitRef1} style={{position:'absolute', left:'10%', top:'15%', width:40, height:40, pointerEvents:'none'}} />
+              <div ref={sitRef2} style={{position:'absolute', left:'50%', top:'10%', width:40, height:40, pointerEvents:'none'}} />
+              <div ref={sitRef3} style={{position:'absolute', left:'85%', top:'20%', width:40, height:40, pointerEvents:'none'}} />
+              <div ref={sitRef4} style={{position:'absolute', left:'20%', top:'60%', width:40, height:40, pointerEvents:'none'}} />
+              <div ref={sitRef5} style={{position:'absolute', left:'70%', top:'55%', width:40, height:40, pointerEvents:'none'}} />
+              <div ref={sitRef6} style={{position:'absolute', left:'40%', top:'80%', width:40, height:40, pointerEvents:'none'}} />
+              <div ref={sitRef7} style={{position:'absolute', left:'80%', top:'75%', width:40, height:40, pointerEvents:'none'}} />
+              <div ref={sitRef8} style={{position:'absolute', left:'5%', top:'75%', width:40, height:40, pointerEvents:'none'}} />
+            </>
+          );
+        })()}
+
         <Image
           src="/landingbgimage.png"
           alt="Ghibli background"

@@ -43,7 +43,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen flex flex-col bg-[#f5ebd7] overflow-x-hidden">
+    <main className="min-h-screen flex flex-col bg-[#f5ebd7] overflow-hidden">
       <Navbar />
       {/* Hero Section */}
       <div className="relative h-80 w-full bg-cover bg-center" style={{ backgroundImage: "url('/landingbgimage.png')" }}>
