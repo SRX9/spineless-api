@@ -55,7 +55,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* WHY USE GHOST API */}
+      {/* WHY USE Spinliness API */}
       <section className="relative w-full flex flex-col items-center py-20 bg-[#f5ebd7]">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="font-ghibli-bold text-3xl md:text-4xl text-[#6a9ab0] mb-10 text-center">
@@ -96,7 +96,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* HOW GHOST API WORKS */}
+      {/* HOW Spinliness API WORKS */}
       <section className="relative w-full flex flex-col items-center py-20 bg-[#f7f3ea]">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="font-ghibli-bold text-3xl md:text-4xl text-[#6a9ab0] mb-10 text-center">
@@ -262,7 +262,7 @@ fetch("https://${window.location.hostname}/api/spineless/asdawd-3ead-2q3e-ad2342
       <section className="relative w-full flex flex-col items-center py-16 bg-gradient-to-b from-[#f5ebd7] to-[#e6dcc2]">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <h3 className="font-ghibli-bold text-2xl md:text-3xl text-[#6a9ab0] mb-6">Stop waiting for backend APIs</h3>
-          <p className="text-lg text-[#8a7a5a] mb-8">Create your first Ghost API in minutes and keep your frontend development moving</p>
+          <p className="text-lg text-[#8a7a5a] mb-8">Create your first Spinliness API in minutes and keep your frontend development moving</p>
           <Link href="/auth/signup">
             <Button className="rounded-full px-8 py-3 text-lg font-semibold">
               Start Building For Free

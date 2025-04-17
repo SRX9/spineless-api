@@ -16,7 +16,7 @@ const ghibliBold = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Ghost API - Spineless API",
+  title: "Spinliness API - Spineless API",
   description: "A powerful mock API generation service for frontend development",
 };
 
