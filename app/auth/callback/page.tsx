@@ -23,10 +23,10 @@ function Content() {
         <p className="text-ghibli-accent text-xl mb-4">Confirming email...</p>
         <div className="flex justify-center gap-4 text-ghibli-accent text-3xl font-ghibli">
           <span>3</span>
-          <span>22</span>
+          <span>2</span>
           <span>1</span>
         </div>
-        <p className="mt-6 text-ghibli-accent">Redirecting to dashboard...</p>
+        <p className="mt-6 text-ghibli-accent">Redirecting to Login. Please Login with your Credentials</p>
       </Card>
     </div>
   );
