@@ -61,7 +61,7 @@ export default function SignUp() {
       }
 
       // If auto-confirm is enabled (development), redirect to dashboard
-      if (data?.user && !data?.user?.identities?.[0]?.identity_data?.email_verified) {
+      if (data?.user && data?.user?.identities?.[0]?.identity_data?.email_verified) {
         router.push('/dashboard');
       } else {
         setMessage("Check your email for the confirmation link");
